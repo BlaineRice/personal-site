@@ -1,0 +1,112 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    background-color: whitesmoke;
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background:lightskyblue;
+    min-height: 200px;
+    padding-top: 30px;
+    border-bottom: whitesmoke 3px solid;
+}
+
+header li{
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header nav{
+    float: right;
+    font-size: 3em;
+    padding-right:20px; 
+}
+
+header h1{
+    font-size: 3em;
+    padding-left: 3%;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    transition: .25s;
+    display: inline;
+}
+
+header a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.current{
+    color: white;
+    text-decoration: underline;
+}
+
+img{
+    float: right;
+    margin: 2em;
+    border-radius: 50%;
+}
+
+.body{
+    font-size: 3em;
+    padding: 2em;
+    text-align: center;
+    padding-bottom: 200px;
+
+}
+
+footer{
+    background-color: lightskyblue;
+    padding: 5%;
+    width: 100%;
+    padding-top: 5%;
+    font-size: 2em;
+    text-align: center;
+    border-top: whitesmoke 5px solid
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+    padding: 3%;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: slategray;
+
+}
+
+@media(max-width: 1024px){  
+    header{
+        min-height: 50px;
+    }
+    header h1{
+        font-size: 0;
+    }
+    header li{
+        display: inline;
+        font-size: .5em;
+        padding: 0%;
+        vertical-align: auto;
+    }
+}
+
+
