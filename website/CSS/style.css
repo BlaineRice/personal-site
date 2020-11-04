@@ -1,17 +1,19 @@
+/*global*/
 body{
     padding:0;
     margin:0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+/*header and header links*/
 header{
     background-color: #00ccff;
     width: 100%;
     height: 20%;
     margin:auto;
     min-height: 35%;
-    overflow: hidden; 
-    border-bottom: white solid 3px;  
+    border-bottom: white solid 3px; 
 }
 
 header h1{
@@ -35,6 +37,11 @@ header li a:hover{
     background-color: black;
 }
 
+header a:hover{
+    text-decoration: underline;
+    font-size: 185%;
+}
+
 header li{
     font-size: 175%;
     padding: 0%;
@@ -42,41 +49,116 @@ header li{
     list-style: none;
 }
 
-img{
-    float: right;
-    margin: 2%;
-    margin-top: 20%;
-    border-radius: 10px;
-    border: #00ccff solid 3px;
-    box-shadow: 0 0 2px 2px #00ccff;
-    width: 30%;
-}
 
-body{
-    background: linear-gradient(to top left, #000000 50%, #00ccff 50%) no-repeat;
-}
-
-.content{
-display: grid;
-grid-template-columns: 30% 70%;
-grid-template-rows: 50%;
-align-self: start;
-grid-auto-rows: minmax(100px, auto);
-}
-
-h2{
-    font-size: 3em;
-    align-self: center;
-    padding-left: 15%;
-}
-
-p{
-    font-size: 2em;
-    align-items:flex-end;
+/*intro section*/
+#family{
+    border-radius: 50%;
     padding: 3%;
-    margin-bottom: 10%;
 }
 
+#mainSection{
+    padding: 3%;
+    font-size: 2em;
+    height: 35vw;
+}
+
+
+
+/*intro content*/
+#mainSection{
+    background: linear-gradient( -65deg,  #000000 40%, #00ccff 40%) no-repeat;
+}
+
+.wrapper{
+    display: flex;
+    grid-template-columns: 2fr 3fr;
+    grid-auto-rows: minmax(100px auto);
+    align-items: center;
+}
+#greetingHead{
+    text-align: center;
+    font-size: 3em;
+    text-decoration: underline white;   
+}
+
+#greeting{
+    padding:0 20% 0 14%;
+    font-size: 1em;    
+}
+
+
+/*about me*/
+section{
+    background-color: #00ccff;
+    padding: 2%;
+}
+
+.text{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px auto);
+    align-items: center;
+}
+
+#head{
+    text-align: center;
+    font-size: 3em;
+    text-decoration: underline white;  
+}
+
+#sub{
+    text-align: center;
+}
+
+#info{
+    text-align: left;
+    padding: 4%;
+    font-size: 2em;  
+}
+
+#selfie{
+    border-radius: 50%;
+}
+
+/*projects*/
+
+.showcase1{
+    width:130px;
+    height: 195px;
+    position: relative;
+    display: inline-block;
+    margin: 50px;
+}
+
+.showcase1 #after{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:99;
+}
+
+.showcase1:hover #after{
+    display: inline;
+}
+
+.showcase1:hover #before{
+    display: none;
+}
+
+.showcase1 #test2{
+    display: none;
+    position: relative;
+    top:0;
+    left:0;
+    z-index: 99;
+}
+
+.showcase1:hover #test2{
+    display: inline;
+}
+
+/*footer*/
 .socials{
     padding:20px;
     margin: auto;
@@ -96,8 +178,9 @@ p{
 
 .socials a:hover{
     text-decoration: underline;
-    font-size: 185%;
+    font-size: 125%;
     background-color: #00ccff;
+    padding: .75%;
 }
 
 footer{
@@ -105,29 +188,46 @@ footer{
     height: 100px;
 }
 
-@media (max-width:720px){
-   body{
-      background: #00ccff; 
-      display: inline;
-   } 
-   img{
-       width: 140%;
-       margin:0;
-       border-radius: 0;
-       align-items: center;
-   }
-   header p{
-       font-size: 1em;
-       text-align: center;
-       align-items: center;
-       margin: 0;
-       padding: 0;
-       display: none;
-   }
-   header h1{
-       font-size: 2em;
-       text-align: center;
-       margin:0;
-   }
+/*mobile*/
+
+@media (max-width:780px){
+    html{
+        padding:none;
+        margin: none;
+    }
+    header h1{
+        font-size: 1em;
+    }
+    header li{
+        text-align:center;   
+ 
+    }
+    header li a{
+        align-items: center;
+        padding: 0;
+        padding-right: .5%; 
+        font-size: .5em;   
+    }
+    #main{
+        font-size: 1.5em;
+        display: inline;
+        height: 100vw;
+    }
+    #space{
+        display: none;
+    }
+    .wrapper{
+        background:#00ccff;
+        display: block;
+        padding: 2%;
+    }
+    #image img{
+        border-radius: 0;
+        max-width:100%;
+        max-height: 100%;
+        display:block;
+        padding:none;
+        margin:none;
+    }
 }
 
